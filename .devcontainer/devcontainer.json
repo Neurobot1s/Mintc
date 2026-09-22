@@ -1,0 +1,20 @@
+{
+  "name": "Linux Mint XFCE Desktop",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "forwardPorts": [6080],
+
+  "portsAttributes": {
+    "6080": {
+      "label": "Linux Mint Desktop",
+      "protocol": "http",
+      "onAutoForward": "openBrowser"
+    }
+  },
+
+  "remoteUser": "vscode",
+
+  "postCreateCommand": "bash .devcontainer/install.sh",
+
+  "postStartCommand": "bash .devcontainer/start.sh"
+}
